@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Regalo Federica: Scegli!</title>
+  <meta name="description" content="Una mappa interattiva d'Europa con tre opzioni di viaggio come regalo per Federica.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Leaflet (mappa) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="container">
+    <h1>Regalo Federica: <span class="accent">Scegli!</span></h1>
+    <p class="subtitle">Clicca su una città per scoprire la sorpresa ✨</p>
+  </header>
+
+  <main class="container">
+    <div id="map" aria-label="Mappa interattiva dell'Europa"></div>
+
+    <section class="legend" aria-label="Legenda e opzioni">
+      <h2>Opzioni</h2>
+      <ul>
+        <li><button class="linklike" data-city="monaco">Principato di Monaco</button> — viaggio tra i castelli della Costa Azzurra con un ospite speciale (in auto)</li>
+        <li><button class="linklike" data-city="bucarest">Bucarest</button> — terme coi fiori</li>
+        <li><button class="linklike" data-city="vienna">Vienna</button> — la città del Natale e dei würstel</li>
+      </ul>
+      <p class="hint">Puoi cliccare i pulsanti sopra o i pin sulla mappa.</p>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <dialog id="modal">
+    <form method="dialog">
+      <header class="modal-header">
+        <h3 id="modal-title"></h3>
+        <button class="close" aria-label="Chiudi">✕</button>
+      </header>
+      <div id="modal-body"></div>
+      <menu>
+        <button value="close">Chiudi</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <footer class="container">
+    <p>© <span id="year"></span> Con affetto 💙</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,32 @@
+/* Stili essenziali e responsivi */
+:root{
+  --bg:#0b0b0e; --fg:#eaeaf2; --muted:#a6a6b3;
+  --accent:#4f7cff; --card:#15151b; --border:#262631;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, sans-serif}
+.container{max-width:980px;margin:0 auto;padding:0 16px}
+
+header{padding:24px 0}
+h1{margin:0 0 6px;font-size:clamp(26px,5vw,40px)}
+.accent{color:var(--accent)}
+.subtitle{color:var(--muted);margin:0}
+
+#map{height:60vh;min-height:380px;border:1px solid var(--border);border-radius:12px;overflow:hidden;margin:12px 0;background:#0f1117}
+.legend{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px}
+.legend h2{margin:0 0 8px}
+.legend ul{margin:0 0 8px 18px}
+.legend li{margin:6px 0}
+.linklike{background:transparent;border:none;color:var(--accent);text-decoration:underline;cursor:pointer;font:inherit;padding:0}
+.hint{color:var(--muted);font-size:.95rem}
+
+footer{color:var(--muted);border-top:1px solid var(--border);padding:16px 0;margin-top:16px}
+
+/* Modal */
+dialog{border:none;border-radius:12px;padding:0;background:var(--card);color:var(--fg);max-width:560px;width:90%}
+dialog::backdrop{background:rgba(0,0,0,.6)}
+.modal-header{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid var(--border)}
+#modal-body{padding:16px}
+menu{display:flex;justify-content:flex-end;gap:8px;padding:12px 16px;border-top:1px solid var(--border);margin:0}
+button{border:1px solid var(--border);background:transparent;color:var(--fg);padding:8px 12px;border-radius:10px;cursor:pointer}
+button.close{border:none;font-size:18px;line-height:1}
